@@ -9,7 +9,7 @@ ENV APPNAME="deluge-gtk"
 
 RUN \
  echo "**** install deps ****" && \
- #sed -i 's/bionic/eoan/g' /etc/apt/sources.list && \
+ sed -i 's/bionic/eoan/g' /etc/apt/sources.list && \
  apt-get update && \
  apt-get install -qy --no-install-recommends \
 	python python-xdg deluge-common deluge-gtk && \
